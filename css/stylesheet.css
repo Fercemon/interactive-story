@@ -1,0 +1,381 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+     background: #000;
+        width: 100vw;
+        height: 100vh;
+}
+
+.wrapper{
+    position: relative;
+    width: 1100px;
+    height: 700px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+iframe{
+    display: none;
+}
+audio{
+    display: none;
+}
+/*//////////////////////////SCENE 1 ///////////////////////*/
+
+.background{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 3%;
+    height: 3%;
+    animation: firstScene 1s 0.5s forwards;
+}
+
+@keyframes firstScene{
+    to{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+.title{
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: title 2s 1.5s forwards;
+    z-index: 1;
+    cursor: pointer;
+}
+
+@keyframes title{
+    to{
+        opacity: 1;
+    }
+}
+
+.scene2{
+    display: none;
+}
+/*//////////////////////////SCENE 2 ///////////////////////*/
+
+/* COMUN STYLES */
+
+.glow{
+    animation: glow 3s infinite;
+}
+
+@keyframes glow {
+    0% {     filter: drop-shadow(12px 12px 7px rgba(0, 255, 255, 0.1)) }
+    20% {     filter: drop-shadow(12px 12px 7px rgba(0, 255, 255, 0.3)) }
+    40% {     filter: drop-shadow(12px 12px 7px rgba(0, 255, 255, 0.5)) }
+    70% {     filter: drop-shadow(12px 12px 7px rgba(0, 255, 255, 0.8)) }
+    100% {     filter: drop-shadow(12px 12px 7px rgba(0, 255, 255, 0.4)) }
+}
+
+
+
+
+.scene2{
+    position: relative;
+    width: 1100px;
+    height: 700px;
+    background-image: url(../img/city-background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.scene2 img{
+    display: none;
+    cursor: pointer;
+}
+
+#mexicanWrapp{
+    position: absolute;
+    top: 58%;
+    left: 21%;
+    z-index: 1;
+}
+
+#mexican{
+    background-image: url(../img/project-illustration/mexican%20walk%20sprite.png);
+    background-repeat: no-repeat;
+    background-size: 1000% auto;
+    display: block;
+    height: 13em;
+    width: 7em;
+}
+
+
+#tnt{
+    display: block;
+    height: 3em;
+    position: absolute;
+    top: 82%;
+    right: 42%;
+    cursor: default;
+}
+
+
+#trash{
+    background-image: url(../img/project-illustration/bin-b.png);
+    width: 70.11px;
+    height: 100px;
+    position: absolute;
+    top: 85%;
+    left: 15%;
+    cursor: pointer;
+}
+
+.canMove{
+    animation: canMove 1s steps(9);
+}
+
+
+
+
+@keyframes canMove{
+    to{
+        background-position: -631px;
+    }
+}
+
+#lamp{
+    display: block;
+    height: 17em;
+    position: absolute;
+    bottom: 15%;
+    left: 4%;
+}
+
+#lamp2{
+    height: 17em;
+    position: absolute;
+    bottom: 15%;
+    left: 4%;
+}
+
+
+#advertisement{
+    display: block;
+    height: 8em;
+    position: absolute;
+    top: 14%;
+    left: 25%;
+    z-index: 1;
+}
+
+#advertisement2{
+    display: block;
+    height: 8em;
+    position: absolute;
+    top: 14%;
+    left: 25%;
+}
+
+
+/*Animation for mexican*/
+
+.goToTnt{
+    animation: goToTnt 1.5s steps(7) forwards;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+@keyframes goToTnt{
+    to{
+        background-position: -1000px;
+    }
+}
+
+.translateTnt{
+   animation: translateTnt 3s forwards;
+}
+
+@keyframes translateTnt{
+    to{
+        transform: translateX(20em);
+    }
+}
+
+/*position for explosion*/
+
+.boom{
+   position: absolute;
+    height: 15em;
+    top: 60%;
+    left: 48%;
+}
+
+.shake{
+    animation: shake 0.5s forwards;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+/* Burning building*/
+
+#burning-building{
+    display: none;
+   background-image: url(../img/project-illustration/fire_806px_height.png);
+    height: 816px;
+    width: 478px;
+    position: absolute;
+    top: 0;
+    left: 42%;
+}
+
+.fire{
+    animation: fire 3s steps(5) infinite;
+}
+
+@keyframes fire {
+    to{
+        background-position: -2390px;
+    }
+}
+
+
+
+#trump{
+    display: none;
+    background-image: url(../img/project-illustration/trump_window-150x1041px.png);
+    height: 150px;
+    width: 173.5px;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    animation: trump 1s steps(6) infinite;
+    cursor: pointer;
+    z-index: 5;
+}
+
+@keyframes trump {
+    to{
+        background-position: -1041px;
+    }
+}
+
+
+/*//////////SCENE 3 ///////////*/
+
+.scene3{
+    display: none;
+    width: 1100px;
+    height: 700px;
+    background-image: url(../img/project-illustration/background-2.png);
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+#twitter{
+    width: 25%;
+    height: auto;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    cursor: pointer;
+}
+
+#trump2{
+    background-image: url(../img/project-illustration/trump_window-150x1041px.png);
+    height: 150px;
+    width: 173.5px;
+    position: absolute;
+    left: 71%;
+    top: 30%;
+    animation: trump2 1s steps(6) infinite;
+    z-index: 5;
+}
+
+@keyframes trump2 {
+    to{
+        background-position: -1041px;
+    }
+}
+
+#burning-building2{
+
+   background-image: url(../img/project-illustration/fire_806px_height.png);
+    height: 820px;
+    width: 478px;
+    position: absolute;
+    top: 10%;
+    left: 47%;
+    animation: fire2 3s steps(5) infinite;
+}
+
+
+
+@keyframes fire2 {
+    to{
+        background-position: -2390px;
+    }
+}
+
+
+/* PUTIN GOING TO HELP */
+
+#flying-putin{
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 20em;
+    cursor: pointer;
+}
+
+.putinFlying{
+    animation: putinFly 1s forwards;
+}
+
+@keyframes putinFly{
+    to{
+        transform: translate(29em, -11em);
+    }
+}
+
+/* GO TO MEXICO */
+
+#saving-trump{
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    width: 20em;
+    animation: goMexico 2s 0.3s forwards;
+}
+
+@keyframes goMexico {
+    to{
+        transform: translateX(42em);
+    }
+}
